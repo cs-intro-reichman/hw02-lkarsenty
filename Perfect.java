@@ -1,4 +1,3 @@
-
 public class Perfect {
 	public static void main (String[] args) {
 		
@@ -8,17 +7,30 @@ public class Perfect {
 		
 		for (int i = 1; i <= x/2; i = i + 1) {
 			
-			if (x % i == 0) {
-  			perfect = perfect + " + " + i;
-			sum = sum + i;
+
+			if (i != 1){
+
+				if (x % i == 0) {
+  				perfect = perfect + " + " + i;
+				sum = sum + i;
+				}
+				
+			} else {
+
+				if (x % i == 0) {
+  				perfect = perfect;
+				sum = sum + i;
+				}				
 			}
+			
+
 		}
 
-			if (sum == x){
-				System.out.println(perfect);
-			} else {
-				System.out.println(x + " is not a perfect number");
-			}
+		if (sum == x){
+			System.out.println(perfect);
+		} else {
+			System.out.println(x + " is not a perfect number");
+		}
 			
 	}
 }
